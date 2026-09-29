@@ -1,0 +1,29 @@
+title: New Local or Domain User Account Created
+id: 7b2d5a44-9c33-4f3d-8b1a-5d6e7f8a9b02
+status: stable
+description: >-
+    Detects creation of a user account (Event ID 4720). Unauthorized account
+    creation is a common persistence step after host compromise.
+references:
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4720
+author: Kestrel Core Rule Pack
+date: 2026-02-01
+logsource:
+    product: windows
+    service: security
+detection:
+    selection_event:
+        EventID: 4720
+    filter_computer_accounts:
+        TargetUserName|endswith: '$'
+    condition: selection_event and not filter_computer_accounts
+fields:
+    - TargetUserName
+    - SubjectUserName
+    - SubjectDomainName
+falsepositives:
+    - Authorized onboarding performed by the help desk or an identity-management tool
+level: medium
+tags:
+    - attack.persistence
+    - attack.t1136.001

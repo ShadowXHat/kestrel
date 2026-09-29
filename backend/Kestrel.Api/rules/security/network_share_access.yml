@@ -1,0 +1,31 @@
+title: Network Share Access by Non-System Account
+id: 7f2d5b91-4c68-4e27-9a30-6b1e8f3c7d45
+status: stable
+description: |
+  Detects access to a network share (Security 5140) from an interactive or
+  service account rather than the machine account. Share access is the
+  observable half of lateral movement over SMB / admin shares.
+references:
+  - https://attack.mitre.org/techniques/T1021/002/
+  - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5140
+author: Kestrel Rule Pack
+date: 2026/03/01
+tags:
+  - attack.lateral_movement
+  - attack.t1021.002
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    Channel: Security
+    EventID: 5140
+  filter_machine_account:
+    SubjectUserName|endswith: '$'
+  filter_ipc_share:
+    ShareName|endswith: '\IPC$'
+  condition: selection and not filter_machine_account and not filter_ipc_share
+level: low
+falsepositives:
+  - Legitimate file-share access by users and backup service accounts
+  - Vulnerability scanners enumerating shares

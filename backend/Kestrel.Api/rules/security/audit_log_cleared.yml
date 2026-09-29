@@ -1,0 +1,27 @@
+title: Windows Security Audit Log Cleared
+id: 3f1c0c1e-6a1a-4a9b-9d4e-1c2b0f6a9e01
+status: stable
+description: >-
+    Detects clearing of the Windows Security event log (Event ID 1102). Attackers
+    clear the audit log to destroy evidence of their activity, making this one of
+    the highest-fidelity anti-forensic indicators available on Windows hosts.
+references:
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1102
+author: Kestrel Core Rule Pack
+date: 2026-02-01
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 1102
+    condition: selection
+fields:
+    - SubjectUserName
+    - SubjectDomainName
+falsepositives:
+    - Log rotation or retention scripts run by a system administrator
+level: critical
+tags:
+    - attack.defense_evasion
+    - attack.t1070.001

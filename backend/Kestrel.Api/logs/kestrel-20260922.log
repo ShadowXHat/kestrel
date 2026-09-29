@@ -1,0 +1,35 @@
+[2026-09-22 22:50:42.377 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+[2026-09-22 22:50:43.492 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity schema ensured (no EF migrations defined yet — run `dotnet ef migrations add` before real deployments).
+[2026-09-22 22:50:43.750 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity store initialized (3 users); bootstrap skipped.
+[2026-09-22 22:50:43.767 +05:30 INF] Kestrel.Core.Storage.EventDatabase: FTS5 index rebuilt.
+[2026-09-22 22:50:43.768 +05:30 INF] Kestrel.Core.Storage.EventStoreInitializationService: Event store ready at D:\Work\Projects\kestrel\backend\Kestrel.Api\data\kestrel.db (schema v2, WAL mode, FTS5 rebuilt).
+[2026-09-22 22:50:43.771 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor started (timeout 1800s, batch 1000, record cap 5000000).
+[2026-09-22 22:50:43.816 +05:30 WRN] Microsoft.AspNetCore.Server.Kestrel: Overriding address(es) 'http://127.0.0.1:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-09-22 22:50:48.755 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /health responded 200 in 50.6381 ms
+[2026-09-22 22:51:12.796 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /health responded 200 in 4.7624 ms
+[2026-09-22 22:52:13.319 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /search responded 401 in 6.5967 ms
+[2026-09-22 22:52:13.325 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/search responded 401 in 1.0842 ms
+[2026-09-22 22:52:13.329 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /health responded 200 in 0.7305 ms
+[2026-09-22 22:54:24.009 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+[2026-09-22 22:54:24.730 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity schema ensured (no EF migrations defined yet — run `dotnet ef migrations add` before real deployments).
+[2026-09-22 22:54:24.983 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity store initialized (3 users); bootstrap skipped.
+[2026-09-22 22:54:24.994 +05:30 INF] Kestrel.Core.Storage.EventDatabase: FTS5 index rebuilt.
+[2026-09-22 22:54:24.995 +05:30 INF] Kestrel.Core.Storage.EventStoreInitializationService: Event store ready at D:\Work\Projects\kestrel\backend\Kestrel.Api\data\kestrel.db (schema v2, WAL mode, FTS5 rebuilt).
+[2026-09-22 22:54:24.998 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor started (timeout 1800s, batch 1000, record cap 5000000).
+[2026-09-22 22:54:25.032 +05:30 WRN] Microsoft.AspNetCore.Server.Kestrel: Overriding address(es) 'http://127.0.0.1:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-09-22 22:54:31.369 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /health responded 200 in 46.7282 ms
+[2026-09-22 22:54:36.722 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/search responded 401 in 11.1721 ms
+[2026-09-22 22:55:23.000 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-22 22:55:23.008 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 217.9113 ms
+[2026-09-22 23:06:20.935 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 1.1509 ms
+[2026-09-22 23:06:42.929 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-22 23:06:42.931 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 114.4447 ms
+[2026-09-22 23:06:42.988 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 13.7344 ms
+[2026-09-22 23:06:42.988 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 15.9583 ms
+[2026-09-22 23:06:45.423 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/search responded 400 in 43.0530 ms
+[2026-09-22 23:06:45.430 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/search responded 400 in 1.4171 ms
+[2026-09-22 23:06:46.196 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9634 ms
+[2026-09-22 23:06:46.198 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.6738 ms
+[2026-09-22 23:06:46.223 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 25.0405 ms
+[2026-09-22 23:06:47.510 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 1301.6366 ms
+[2026-09-22 23:06:49.931 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 6936.1989 ms

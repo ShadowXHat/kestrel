@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #070a0f;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.06) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(2, 132, 199, 0.06) 0px, transparent 50%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  /* Custom dark scrollbar for data tables and panels */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #070a0f;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+    border: 1px solid #070a0f;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+  }
+}
+
+@layer utilities {
+  /* High visibility focus state utility required for SOC accessibility */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-kestrel-accent focus-visible:ring-offset-2 focus-visible:ring-offset-kestrel-base;
+  }
+
+  .glass-panel {
+    background: rgba(13, 19, 31, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-card {
+    background: rgba(20, 29, 46, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-border {
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 0 15px -3px rgba(14, 165, 233, 0.15);
+  }
+
+  .glow-border-subtle {
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 0 10px -2px rgba(14, 165, 233, 0.08);
+  }
+}
+
+/* ==========================================================================
+   AG Grid Polished Dark SOC Theme Overrides (.ag-theme-alpine-dark)
+   ========================================================================== */
+.ag-theme-alpine-dark {
+  --ag-background-color: #0d131f;
+  --ag-header-background-color: #070a0f;
+  --ag-header-foreground-color: #94a3b8;
+  --ag-header-cell-hover-background-color: #141d2e;
+  --ag-foreground-color: #e2e8f0;
+  --ag-row-hover-color: rgba(14, 165, 233, 0.08);
+  --ag-selected-row-background-color: rgba(14, 165, 233, 0.16);
+  --ag-border-color: #1e293b;
+  --ag-secondary-border-color: #1e293b;
+  --ag-row-border-color: rgba(30, 41, 59, 0.7);
+  --ag-cell-horizontal-border: 1px solid rgba(30, 41, 59, 0.5);
+  --ag-font-family: 'JetBrains Mono', monospace;
+  --ag-font-size: 12px;
+  --ag-grid-size: 6px;
+  --ag-header-column-separator-display: block;
+  --ag-header-column-separator-color: #1e293b;
+}
+
+.ag-theme-alpine-dark .ag-header {
+  border-bottom: 1px solid #1e293b !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 11px !important;
+}
+
+.ag-theme-alpine-dark .ag-header-cell {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.ag-theme-alpine-dark .ag-row {
+  transition: background-color 150ms ease-in-out;
+}
+
+.ag-theme-alpine-dark .ag-cell {
+  line-height: 38px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  display: flex;
+  align-items: center;
+}
+
+.ag-theme-alpine-dark .ag-paging-panel {
+  background-color: #070a0f !important;
+  border-top: 1px solid #1e293b !important;
+  color: #94a3b8 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+}
+
+.ag-theme-alpine-dark .ag-paging-page-size {
+  color: #94a3b8 !important;
+}
+
+.ag-theme-alpine-dark .ag-floating-filter-button {
+  display: none !important;
+}
+

@@ -1,0 +1,60 @@
+
+> backend\Kestrel.Api\logs\kestrel-20260920_001.log:3337:[2026-09-20 11:43:49.907 +05:30 ERR] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3338:System.InvalidOperationException: The PipeWriter 'ResponseBodyPipeWriter' does not implement PipeWriter.UnflushedBytes.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3339:   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_PipeWriterDoesNotImplementUnflushedBytes(PipeWriter pipeWriter)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3340:   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3341:   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3342:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3343:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3344:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3345:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3346:--- End of stack trace from previous location ---
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3347:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3348:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3349:   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3350:   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3351:   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3352:   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3353:   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3354:   at Microsoft.AspNetCore.RateLimiting.RateLimitingMiddleware.InvokeInternal(HttpContext context, EnableRateLimitingAttribute enableRateLimitingAttribute)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3355:   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3356:   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3357:[2026-09-20 11:43:49.912 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.6301 ms
+> backend\Kestrel.Api\logs\kestrel-20260920_001.log:3358:[2026-09-20 11:43:49.921 +05:30 ERR] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /health responded 500 in 5.2696 ms
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3359:System.InvalidOperationException: The PipeWriter 'ResponseBodyPipeWriter' does not implement PipeWriter.UnflushedBytes.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3360:   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_PipeWriterDoesNotImplementUnflushedBytes(PipeWriter pipeWriter)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3361:   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3362:   at Microsoft.AspNetCore.Http.HttpResponseJsonExtensions.<WriteAsJsonAsync>g__WriteAsJsonAsyncSlow|5_0[TValue](HttpResponse response, TValue value, JsonTypeInfo`1 jsonTypeInfo, CancellationToken cancellationToken)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3363:   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteResultWriteResponse(IResult result, HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3364:   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3365:   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3366:   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3367:   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3368:   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+> backend\Kestrel.Api\logs\kestrel-20260920_001.log:3369:[2026-09-20 11:43:49.922 +05:30 ERR] Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware: An unhandled exception has occurred while executing the request.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3370:System.InvalidOperationException: The PipeWriter 'ResponseBodyPipeWriter' does not implement PipeWriter.UnflushedBytes.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3371:   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_PipeWriterDoesNotImplementUnflushedBytes(PipeWriter pipeWriter)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3372:   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3373:   at Microsoft.AspNetCore.Http.HttpResponseJsonExtensions.<WriteAsJsonAsync>g__WriteAsJsonAsyncSlow|5_0[TValue](HttpResponse response, TValue value, JsonTypeInfo`1 jsonTypeInfo, CancellationToken cancellationToken)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3374:   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteResultWriteResponse(IResult result, HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3375:   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3376:   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3377:   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3378:   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3379:   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3380:   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3381:[2026-09-20 11:43:49.925 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.4134 ms
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3382:[2026-09-20 11:43:49.927 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/events responded 401 in 0.2048 ms
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3383:[2026-09-20 11:43:49.933 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor stopped.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3384:[2026-09-20 11:47:00.266 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3385:[2026-09-20 11:47:00.979 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity schema ensured (no EF migrations defined yet — run `dotnet ef migrations add` before real deployments).
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3386:[2026-09-20 11:47:01.263 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Role seeded: Viewer
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3387:[2026-09-20 11:47:01.266 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Role seeded: Analyst
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3388:[2026-09-20 11:47:01.267 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Role seeded: Admin
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3389:[2026-09-20 11:47:01.291 +05:30 WRN] Kestrel.Api.Auth.IdentityInitializationService: Bootstrap: DEVELOPMENT default admin 'admin' created with password 'Dev#Admin-2026!'. CHANGE THIS PASSWORD before any use beyond local testing.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3390:[2026-09-20 11:47:01.452 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Bootstrap: admin 'admin' created with roles [Viewer, Analyst, Admin].
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3391:[2026-09-20 11:47:01.471 +05:30 INF] Kestrel.Core.Storage.EventDatabase: FTS5 index rebuilt.
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3392:[2026-09-20 11:47:01.471 +05:30 INF] Kestrel.Core.Storage.EventStoreInitializationService: Event store ready at D:\Work\Projects\kestrel\backend\Kestrel.Api\data\kestrel.db (schema v2, WAL mode, FTS5 rebuilt).
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3393:[2026-09-20 11:47:01.473 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor started (timeout 1800s, batch 1000, record cap 5000000).
+  backend\Kestrel.Api\logs\kestrel-20260920_001.log:3394:[2026-09-20 11:47:01.737 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (1e873d81-199e-469f-ba3d-08db8c2bea00) from unknown
+

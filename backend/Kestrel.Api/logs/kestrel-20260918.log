@@ -1,0 +1,32 @@
+[2026-09-18 23:57:28.606 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+[2026-09-18 23:57:29.818 +05:30 ERR] Microsoft.EntityFrameworkCore.Database.Connection: An error occurred using the connection to database 'main' on server 'D:\Work\Projects\kestrel\backend\Kestrel.Api\data\data/kestrel.db'.
+[2026-09-18 23:57:29.821 +05:30 ERR] Microsoft.Extensions.Hosting.Internal.Host: Hosting failed to start
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 14: 'unable to open database file'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteConnectionInternal..ctor(SqliteConnectionStringBuilder connectionOptions, SqliteConnectionPool pool)
+   at Microsoft.Data.Sqlite.SqliteConnectionPool.GetConnection()
+   at Microsoft.Data.Sqlite.SqliteConnectionFactory.GetConnection(SqliteConnection outerConnection)
+   at Microsoft.Data.Sqlite.SqliteConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Create()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.CreateAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreatedAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.EnsureCreatedAsync(CancellationToken cancellationToken)
+   at Kestrel.Api.Auth.IdentityInitializationService.StartAsync(CancellationToken cancellationToken) in D:\Work\Projects\kestrel\backend\Kestrel.Api\Auth\IdentityInitializationService.cs:line 56
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+[2026-09-18 23:59:00.899 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+[2026-09-18 23:59:01.757 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity schema ensured (no EF migrations defined yet — run `dotnet ef migrations add` before real deployments).
+[2026-09-18 23:59:02.059 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Role seeded: Viewer
+[2026-09-18 23:59:02.064 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Role seeded: Analyst
+[2026-09-18 23:59:02.068 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Role seeded: Admin
+[2026-09-18 23:59:02.094 +05:30 WRN] Kestrel.Api.Auth.IdentityInitializationService: Bootstrap: DEVELOPMENT default admin 'admin' created with password 'Dev#Admin-2026!'. CHANGE THIS PASSWORD before any use beyond local testing.
+[2026-09-18 23:59:02.259 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Bootstrap: admin 'admin' created with roles [Viewer, Analyst, Admin].
+[2026-09-18 23:59:02.277 +05:30 INF] Kestrel.Core.Storage.EventStoreInitializationService: Event store ready at D:\Work\Projects\kestrel\backend\Kestrel.Api\data\kestrel.db (schema v2, WAL mode).
+[2026-09-18 23:59:02.279 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor started (timeout 1800s, batch 1000, record cap 5000000).
+[2026-09-18 23:59:02.340 +05:30 WRN] Microsoft.AspNetCore.Server.Kestrel: Overriding address(es) 'http://127.0.0.1:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-09-18 23:59:54.871 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 16.5877 ms
+[2026-09-18 23:59:55.563 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 3.5764 ms
+[2026-09-18 23:59:55.777 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 3.5017 ms

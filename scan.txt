@@ -1,0 +1,8 @@
+
+FullName                                                                   LastWriteTime
+--------                                                                   -------------
+D:\Work\Projects\kestrel\backend\Kestrel.Api\logs\kestrel-20260920_001.log 9/20/2026 11:49:55 AM
+D:\Work\Projects\kestrel\backend\Kestrel.Api\logs\kestrel-20260920.log     9/20/2026 11:07:00 AM
+D:\Work\Projects\kestrel\backend\Kestrel.Api\logs\kestrel-20260919.log     9/19/2026 9:14:37 AM
+D:\Work\Projects\kestrel\backend\Kestrel.Api\logs\kestrel-20260918.log     9/18/2026 11:59:55 PM
+

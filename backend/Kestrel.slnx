@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Kestrel.Api/Kestrel.Api.csproj" />
+  <Project Path="Kestrel.Core/Kestrel.Core.csproj" />
+  <Project Path="Kestrel.Tests/Kestrel.Tests.csproj" />
+</Solution>

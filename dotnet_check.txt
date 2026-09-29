@@ -1,0 +1,10 @@
+host
+metadata
+packs
+sdk
+sdk-manifests
+shared
+templates
+dotnet.exe
+LICENSE.txt
+ThirdPartyNotices.txt

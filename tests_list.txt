@@ -1,0 +1,16 @@
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\EventDatabaseTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\EventFixtures.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\EventStoreTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\EvtxFileValidatorTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\IngestEndpointTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\IngestJobProcessorTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Auth\AuthenticationGateTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Auth\UsersEndpointTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Detection\DetectionFixtures.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Detection\SigmaCompilerTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\obj\Debug\net8.0\Kestrel.Tests.AssemblyInfo.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\obj\Debug\net8.0\Kestrel.Tests.GlobalUsings.g.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Properties\AssemblyInfo.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Security\BindingGuardTests.cs
+D:\Work\Projects\kestrel\backend\Kestrel.Tests\Support\KestrelTestFactory.cs

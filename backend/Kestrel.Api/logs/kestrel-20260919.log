@@ -1,0 +1,156 @@
+[2026-09-19 00:00:20.033 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 00:00:20.046 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 194.4198 ms
+[2026-09-19 00:00:37.432 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 37.2104 ms
+[2026-09-19 00:00:52.447 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 4.6524 ms
+[2026-09-19 00:00:55.988 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 71.8570 ms
+[2026-09-19 00:01:53.563 +05:30 WRN] Kestrel.Api.Controllers.UsersController: Audit: user creation failed for 'analyst1': Passwords must be at least 12 characters.; Passwords must have at least one non alphanumeric character.; Passwords must have at least one lowercase ('a'-'z').; Passwords must have at least one uppercase ('A'-'Z').
+[2026-09-19 00:01:53.564 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/users responded 400 in 15.2541 ms
+[2026-09-19 00:02:08.363 +05:30 INF] Kestrel.Api.Controllers.UsersController: Audit: user 'analyst1' (de6b1208-9cc4-468a-92f4-c478652901ee) created by admin with roles [Analyst]
+[2026-09-19 00:02:08.364 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/users responded 201 in 79.1610 ms
+[2026-09-19 00:02:08.374 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 3.2559 ms
+[2026-09-19 00:02:31.060 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for admin
+[2026-09-19 00:02:31.061 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 8.6918 ms
+[2026-09-19 00:02:31.090 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.3084 ms
+[2026-09-19 00:02:34.736 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for analyst1 (de6b1208-9cc4-468a-92f4-c478652901ee) from 127.0.0.1
+[2026-09-19 00:02:34.736 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 51.6659 ms
+[2026-09-19 00:02:42.397 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 1.5631 ms
+[2026-09-19 00:03:54.269 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for analyst1
+[2026-09-19 00:03:54.269 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 1.8859 ms
+[2026-09-19 00:03:54.310 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.4184 ms
+[2026-09-19 00:03:58.018 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 00:03:58.019 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 51.5999 ms
+[2026-09-19 00:04:03.860 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 2.9020 ms
+[2026-09-19 00:04:21.398 +05:30 INF] Kestrel.Api.Controllers.UsersController: Audit: user 'viewer' (241a64ee-3f51-4a90-aa4f-d27c2f1e3d50) created by admin with roles [Viewer]
+[2026-09-19 00:04:21.399 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/users responded 201 in 61.0568 ms
+[2026-09-19 00:04:21.409 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 3.0292 ms
+[2026-09-19 00:04:27.151 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for admin
+[2026-09-19 00:04:27.152 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 0.9740 ms
+[2026-09-19 00:04:27.175 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.3526 ms
+[2026-09-19 00:04:28.778 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for viewer (241a64ee-3f51-4a90-aa4f-d27c2f1e3d50) from 127.0.0.1
+[2026-09-19 00:04:28.779 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 51.4947 ms
+[2026-09-19 00:13:04.176 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 2.3443 ms
+[2026-09-19 00:13:04.176 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 3.5551 ms
+[2026-09-19 00:14:26.215 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 200 in 24.4978 ms
+[2026-09-19 00:14:26.275 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.7437 ms
+[2026-09-19 00:14:26.275 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.7172 ms
+[2026-09-19 00:17:47.885 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 201579.7553 ms
+[2026-09-19 00:17:48.130 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 200 in 2.2278 ms
+[2026-09-19 00:17:48.173 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.5390 ms
+[2026-09-19 00:17:48.173 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.5446 ms
+[2026-09-19 00:17:51.586 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for viewer
+[2026-09-19 00:17:51.587 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 0.7181 ms
+[2026-09-19 00:17:51.604 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 3391.1181 ms
+[2026-09-19 00:17:51.615 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.2437 ms
+[2026-09-19 00:17:55.647 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.5414 ms
+[2026-09-19 00:18:27.671 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 00:18:27.671 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 52.1232 ms
+[2026-09-19 00:18:27.705 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 2.0851 ms
+[2026-09-19 00:18:27.706 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.6895 ms
+[2026-09-19 00:18:30.509 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.3686 ms
+[2026-09-19 00:18:30.514 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.7505 ms
+[2026-09-19 00:18:30.515 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 3.3375 ms
+[2026-09-19 00:18:42.146 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 11625.7602 ms
+[2026-09-19 00:18:43.653 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 3.2452 ms
+[2026-09-19 00:19:17.139 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for admin
+[2026-09-19 00:19:17.140 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 0.7929 ms
+[2026-09-19 00:19:17.154 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 49436.4689 ms
+[2026-09-19 00:19:17.171 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.3625 ms
+[2026-09-19 08:23:54.010 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+[2026-09-19 08:23:55.110 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity schema ensured (no EF migrations defined yet — run `dotnet ef migrations add` before real deployments).
+[2026-09-19 08:23:55.381 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity store initialized (3 users); bootstrap skipped.
+[2026-09-19 08:23:55.390 +05:30 INF] Kestrel.Core.Storage.EventStoreInitializationService: Event store ready at D:\Work\Projects\kestrel\backend\Kestrel.Api\data\kestrel.db (schema v2, WAL mode).
+[2026-09-19 08:23:55.392 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor started (timeout 1800s, batch 1000, record cap 5000000).
+[2026-09-19 08:23:55.446 +05:30 WRN] Microsoft.AspNetCore.Server.Kestrel: Overriding address(es) 'http://127.0.0.1:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-09-19 08:24:19.437 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 400 in 118.2989 ms
+[2026-09-19 08:24:24.230 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 08:24:24.235 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 210.7336 ms
+[2026-09-19 08:24:37.585 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 08:24:37.586 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 128.2202 ms
+[2026-09-19 08:24:37.635 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 12.8040 ms
+[2026-09-19 08:24:37.635 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 12.8040 ms
+[2026-09-19 08:24:42.605 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for admin
+[2026-09-19 08:24:42.605 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 9.6363 ms
+[2026-09-19 08:24:42.620 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 4973.6508 ms
+[2026-09-19 08:24:42.628 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 3.0217 ms
+[2026-09-19 08:24:55.940 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for analyst1 (de6b1208-9cc4-468a-92f4-c478652901ee) from 127.0.0.1
+[2026-09-19 08:24:55.941 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 54.9714 ms
+[2026-09-19 08:24:55.961 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.4372 ms
+[2026-09-19 08:24:55.962 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.8298 ms
+[2026-09-19 08:24:58.094 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for analyst1
+[2026-09-19 08:24:58.094 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 1.0549 ms
+[2026-09-19 08:24:58.112 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 2142.0401 ms
+[2026-09-19 08:24:58.123 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.5356 ms
+[2026-09-19 08:25:07.051 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.3273 ms
+[2026-09-19 08:27:07.503 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.2519 ms
+[2026-09-19 08:27:08.650 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for analyst1 (de6b1208-9cc4-468a-92f4-c478652901ee) from 127.0.0.1
+[2026-09-19 08:27:08.650 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 57.0632 ms
+[2026-09-19 08:27:08.676 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9697 ms
+[2026-09-19 08:27:08.676 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9649 ms
+[2026-09-19 08:27:53.013 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.3870 ms
+[2026-09-19 08:27:53.020 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9553 ms
+[2026-09-19 08:27:53.064 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 46.6854 ms
+[2026-09-19 08:27:54.299 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 1266.1994 ms
+[2026-09-19 08:28:23.534 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for analyst1
+[2026-09-19 08:28:23.534 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 1.8688 ms
+[2026-09-19 08:28:23.553 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 74868.9571 ms
+[2026-09-19 08:28:23.565 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.5205 ms
+[2026-09-19 08:28:26.679 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 08:28:26.679 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 68.2888 ms
+[2026-09-19 08:28:26.710 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9185 ms
+[2026-09-19 08:28:26.710 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.5956 ms
+[2026-09-19 08:28:32.313 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.0376 ms
+[2026-09-19 08:28:32.318 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 2.7816 ms
+[2026-09-19 08:28:32.318 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9831 ms
+[2026-09-19 08:28:33.506 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 1178.4756 ms
+[2026-09-19 08:28:34.671 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 19.0580 ms
+[2026-09-19 08:28:40.101 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for admin
+[2026-09-19 08:28:40.102 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 1.3387 ms
+[2026-09-19 08:28:40.110 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 13383.9224 ms
+[2026-09-19 08:28:40.132 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.3628 ms
+[2026-09-19 08:28:43.153 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for viewer (241a64ee-3f51-4a90-aa4f-d27c2f1e3d50) from 127.0.0.1
+[2026-09-19 08:28:43.153 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 58.7128 ms
+[2026-09-19 08:28:43.174 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.0892 ms
+[2026-09-19 08:28:43.176 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.8367 ms
+[2026-09-19 08:29:08.917 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for viewer
+[2026-09-19 08:29:08.917 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 1.2713 ms
+[2026-09-19 08:29:08.926 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 25741.8369 ms
+[2026-09-19 08:29:08.938 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.6024 ms
+[2026-09-19 08:29:10.722 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.1771 ms
+[2026-09-19 08:29:32.823 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.2570 ms
+[2026-09-19 08:30:28.775 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.2593 ms
+[2026-09-19 08:30:56.262 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.4897 ms
+[2026-09-19 08:31:00.492 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 08:31:00.492 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 60.9220 ms
+[2026-09-19 08:31:00.527 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.2625 ms
+[2026-09-19 08:31:00.527 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.6937 ms
+[2026-09-19 08:31:04.699 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.3080 ms
+[2026-09-19 08:31:04.702 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 2.6640 ms
+[2026-09-19 08:31:04.705 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.7510 ms
+[2026-09-19 08:31:05.847 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 1125.3834 ms
+[2026-09-19 08:31:08.563 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 3.0616 ms
+[2026-09-19 08:31:48.905 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: logout for admin
+[2026-09-19 08:31:48.906 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/logout responded 204 in 0.8369 ms
+[2026-09-19 08:31:48.917 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 48383.8932 ms
+[2026-09-19 08:31:48.927 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 0.2546 ms
+[2026-09-19 09:13:13.377 +05:30 INF] Kestrel.Api: Binding guard: http://127.0.0.1:5000 (loopback)
+[2026-09-19 09:13:14.088 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity schema ensured (no EF migrations defined yet — run `dotnet ef migrations add` before real deployments).
+[2026-09-19 09:13:14.343 +05:30 INF] Kestrel.Api.Auth.IdentityInitializationService: Identity store initialized (3 users); bootstrap skipped.
+[2026-09-19 09:13:14.352 +05:30 INF] Kestrel.Core.Storage.EventStoreInitializationService: Event store ready at D:\Work\Projects\kestrel\backend\Kestrel.Api\data\kestrel.db (schema v2, WAL mode).
+[2026-09-19 09:13:14.354 +05:30 INF] Kestrel.Core.Jobs.IngestJobProcessor: Ingest job processor started (timeout 1800s, batch 1000, record cap 5000000).
+[2026-09-19 09:13:14.393 +05:30 WRN] Microsoft.AspNetCore.Server.Kestrel: Overriding address(es) 'http://127.0.0.1:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2026-09-19 09:13:34.636 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 09:13:34.649 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 244.8620 ms
+[2026-09-19 09:14:14.663 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/auth/me responded 401 in 8.1395 ms
+[2026-09-19 09:14:16.112 +05:30 INF] Kestrel.Api.Controllers.AuthController: Audit: login succeeded for admin (6f49ddf6-6e76-496d-bb54-1c80c6bc1b4c) from 127.0.0.1
+[2026-09-19 09:14:16.115 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /api/auth/login responded 200 in 113.0721 ms
+[2026-09-19 09:14:16.162 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 11.6210 ms
+[2026-09-19 09:14:16.162 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 11.6210 ms
+[2026-09-19 09:14:20.463 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 2.3044 ms
+[2026-09-19 09:14:20.466 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.0597 ms
+[2026-09-19 09:14:20.501 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/ingest/jobs responded 200 in 35.4289 ms
+[2026-09-19 09:14:21.846 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 1369.0252 ms
+[2026-09-19 09:14:22.727 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 0.9263 ms
+[2026-09-19 09:14:22.731 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP POST /hubs/events/negotiate responded 200 in 1.3340 ms
+[2026-09-19 09:14:27.530 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 4792.3762 ms
+[2026-09-19 09:14:28.523 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /api/users responded 200 in 29.9120 ms
+[2026-09-19 09:14:37.424 +05:30 INF] Serilog.AspNetCore.RequestLoggingMiddleware: HTTP GET /hubs/events responded 101 in 21251.6251 ms

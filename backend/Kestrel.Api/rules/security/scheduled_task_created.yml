@@ -1,0 +1,29 @@
+title: Scheduled Task Created Outside System Path
+id: 4d1b8e27-9a35-42c6-b7d8-1e6f3a9c2b70
+status: stable
+description: |
+  Detects creation of a scheduled task (Security 4698) whose task content
+  does not point at the Windows \Microsoft\ task tree. Scheduled tasks are
+  a durable persistence and privilege-escalation mechanism.
+references:
+  - https://attack.mitre.org/techniques/T1053/005/
+author: Kestrel Rule Pack
+date: 2026/03/01
+tags:
+  - attack.persistence
+  - attack.privilege_escalation
+  - attack.t1053.005
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    Channel: Security
+    EventID: 4698
+  filter_microsoft_tree:
+    TaskContent|contains: '\Microsoft\'
+  condition: selection and not filter_microsoft_tree
+level: medium
+falsepositives:
+  - Legitimate software installers registering update tasks in a vendor path
+  - Admin automation writing tasks directly under \ (documented change)

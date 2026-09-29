@@ -1,0 +1,28 @@
+title: Local User Account Created via Net User or Computer Management
+id: 7e3a0c58-2d94-4f61-a3b7-9c5e1d8f4a26
+status: stable
+description: |
+  Detects creation of a local user account (Security 4720) by a subject
+  other than the machine/SYSTEM context. New local accounts are a common
+  persistence step after credential access.
+references:
+  - https://attack.mitre.org/techniques/T1136/001/
+author: Kestrel Rule Pack
+date: 2026/03/01
+tags:
+  - attack.persistence
+  - attack.t1136.001
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    Channel: Security
+    EventID: 4720
+  filter_system_subject:
+    SubjectUserName|endswith: '$'
+  condition: selection and not filter_system_subject
+level: medium
+falsepositives:
+  - Helpdesk / provisioning tooling creating local accounts (ticketed work)
+  - Application installers creating a dedicated service account

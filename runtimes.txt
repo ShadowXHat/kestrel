@@ -1,0 +1,9 @@
+Microsoft.AspNetCore.App
+Microsoft.NETCore.App
+Microsoft.WindowsDesktop.App
+---- 
+8.0.31
+---- 
+8.0.31
+---- 
+8.0.425

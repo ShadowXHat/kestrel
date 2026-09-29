@@ -1,0 +1,41 @@
+# Kestrel Agent Configuration
+# Rules for Cline and other AI coding agents
+
+## Project Context
+- This is a Windows Event Log analyzer for SOC teams
+- Backend: ASP.NET Core 8 (C#), Frontend: React 18 + TypeScript + Vite
+- Database: SQLite with FTS5 search
+- Detection: Custom Sigma rule matcher
+- MITRE ATT&CK integration via embedded STIX JSON
+
+## Code Rules
+- Use async/await throughout the backend
+- All API endpoints require authentication (cookie-based)
+- Use server-side row streaming for AG Grid (100k+ rows)
+- Never format event messages in the hot path (lazy rendering)
+- Use Serilog structured logging for all operations
+- All error handling: per-record, per-rule — never silent failures
+- Use SQLite WAL mode
+- HTTPS enforced in production
+
+## Security Rules
+- No unauthenticated access to event data
+- Roles: Viewer / Analyst / Admin enforced server-side
+- Upload validation: magic-byte check for EVTX files
+- Background job parsing with timeout and memory bounds
+- Input validation on all endpoints
+
+## Architecture Patterns
+- Backend uses background job queue for ingestion
+- SignalR for real-time event push and alerts
+- FTS5 trigram tokenizer for full-text search
+- Sigma matcher: channel+EventID pre-filter → FastMatch → expression tree evaluation
+- Evtx parsing via System.Diagnostics.Eventing.Reader
+- Docker deployment with nginx TLS termination
+
+## Do Not
+- Do NOT use Blazor for the frontend — use React
+- Do NOT use JWT/localStorage for auth — use cookies + SameSite
+- Do NOT use browser-side (WASM) parsing — server-side only
+- Do NOT use Lucene.NET — use SQLite FTS5
+- Do NOT allow unauthenticated localhost binding in production
